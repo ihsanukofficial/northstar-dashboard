@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'remixicon';
+  src: url('../../node_modules/remixicon/fonts/remixicon.woff2') format('woff2');
+  font-display: block;
+  font-style: normal;
+  font-weight: normal;
+}
+
+[class^='ri-'],
+[class*=' ri-'] {
+  font-family: 'remixicon' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ri-alarm-warning-line::before { content: '\ea1d'; }
+.ri-archive-stack-line::before { content: '\f427'; }
+.ri-arrow-down-line::before { content: '\ea4c'; }
+.ri-arrow-down-s-line::before { content: '\ea4e'; }
+.ri-arrow-left-line::before { content: '\ea60'; }
+.ri-arrow-up-line::before { content: '\ea76'; }
+.ri-bank-card-line::before { content: '\ea92'; }
+.ri-battery-charge-line::before { content: '\eaae'; }
+.ri-box-3-line::before { content: '\f2f5'; }
+.ri-briefcase-4-line::before { content: '\eaf1'; }
+.ri-calendar-line::before { content: '\eb27'; }
+.ri-chat-3-line::before { content: '\eb51'; }
+.ri-chat-smile-3-line::before { content: '\eb71'; }
+.ri-checkbox-circle-line::before { content: '\eb81'; }
+.ri-check-line::before { content: '\eb7b'; }
+.ri-circle-line::before { content: '\f3c1'; }
+.ri-close-line::before { content: '\eb99'; }
+.ri-compass-3-line::before { content: '\ebbe'; }
+.ri-contacts-book-3-line::before { content: '\f430'; }
+.ri-cup-line::before { content: '\ec06'; }
+.ri-device-line::before { content: '\ec2e'; }
+.ri-funds-box-line::before { content: '\eda1'; }
+.ri-goblet-2-line::before { content: '\f4e0'; }
+.ri-group-line::before { content: '\ede3'; }
+.ri-headphone-line::before { content: '\ee05'; }
+.ri-inbox-2-line::before { content: '\f3a8'; }
+.ri-information-line::before { content: '\ee59'; }
+.ri-keyboard-box-line::before { content: '\ee73'; }
+.ri-layout-grid-line::before { content: '\ee90'; }
+.ri-lightbulb-flash-line::before { content: '\eea8'; }
+.ri-line-chart-line::before { content: '\eeab'; }
+.ri-logout-box-r-line::before { content: '\eeda'; }
+.ri-loop-right-line::before { content: '\f33f'; }
+.ri-menu-2-line::before { content: '\ef32'; }
+.ri-money-dollar-circle-line::before { content: '\ef65'; }
+.ri-notification-3-line::before { content: '\ef94'; }
+.ri-palette-line::before { content: '\efc5'; }
+.ri-pie-chart-2-line::before { content: '\eff6'; }
+.ri-pulse-line::before { content: '\f035'; }
+.ri-refresh-line::before { content: '\f064'; }
+.ri-search-eye-line::before { content: '\f0cf'; }
+.ri-search-line::before { content: '\f0d1'; }
+.ri-secure-payment-line::before { content: '\f0d3'; }
+.ri-send-plane-2-line::before { content: '\f0d8'; }
+.ri-settings-4-line::before { content: '\f0e8'; }
+.ri-shopping-bag-3-line::before { content: '\f116'; }
+.ri-shopping-basket-2-line::before { content: '\f11a'; }
+.ri-sparkling-2-line::before { content: '\f36b'; }
+.ri-speaker-3-line::before { content: '\f171'; }
+.ri-stack-line::before { content: '\f181'; }
+.ri-user-add-line::before { content: '\f25e'; }
+.ri-user-follow-line::before { content: '\f261'; }
+.ri-user-search-line::before { content: '\f26c'; }
+.ri-user-settings-line::before { content: '\f26e'; }
+.ri-wallet-3-line::before { content: '\f2ac'; }
+.ri-webcam-line::before { content: '\f2b2'; }

@@ -1,0 +1,84 @@
+.page {
+  position: relative;
+  display: grid;
+  min-height: min(38rem, calc(100dvh - 10rem));
+  place-items: center;
+  align-content: center;
+  gap: var(--space-3);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.code {
+  position: absolute;
+  color: var(--color-primary-soft);
+  font-size: clamp(9rem, 25vw, 20rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 1;
+  opacity: 0.75;
+  user-select: none;
+}
+
+.icon,
+.eyebrow,
+.page h2,
+.description,
+.page a {
+  position: relative;
+}
+
+.icon {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  place-items: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-action);
+  color: var(--color-on-primary);
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.eyebrow {
+  margin-top: var(--space-2);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  letter-spacing: -0.045em;
+}
+
+.description {
+  max-width: 30rem;
+  padding: 0 var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.page a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-action);
+  color: var(--color-on-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.page a:hover {
+  background: var(--color-primary-action-hover);
+  transform: translateY(-1px);
+}

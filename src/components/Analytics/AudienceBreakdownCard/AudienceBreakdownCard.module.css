@@ -1,0 +1,95 @@
+.card {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.card header p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.card h2 {
+  margin-top: 0.15rem;
+  font-size: var(--font-size-lg);
+}
+
+.growth {
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 0.85fr) minmax(7rem, 1fr);
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.chartWrap {
+  position: relative;
+  min-height: 8.8rem;
+}
+
+.chartValue {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  display: grid;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.chartValue strong {
+  font-size: var(--font-size-lg);
+  line-height: 1.1;
+}
+
+.chartValue span {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+}
+
+.legend {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.legend li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.legend strong {
+  color: var(--color-text);
+}
+
+.swatch {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 390px) {
+  .body { grid-template-columns: 1fr; }
+  .chartWrap { max-width: 10rem; width: 100%; margin: auto; }
+}

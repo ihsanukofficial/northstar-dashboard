@@ -1,0 +1,55 @@
+.page {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  gap: var(--space-6);
+}
+
+.pageHeader {
+  max-width: 48rem;
+}
+
+.eyebrow {
+  margin-bottom: var(--space-1);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pageHeader h2 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.description {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.settingsGrid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
+  align-items: start;
+  gap: var(--space-5);
+}
+
+@media (max-width: 1080px) {
+  .settingsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    gap: var(--space-5);
+  }
+
+  .settingsGrid {
+    gap: var(--space-4);
+  }
+}

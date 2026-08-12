@@ -1,0 +1,52 @@
+.panel {
+  display: grid;
+  min-height: 15rem;
+  place-items: center;
+  align-content: center;
+  gap: var(--space-2);
+  padding: var(--space-8);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-subtle);
+  text-align: center;
+}
+
+.panel > i {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 1.35rem;
+}
+
+.panel h3 {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-md);
+}
+
+.panel p {
+  max-width: 28rem;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.error > i {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--color-primary-soft);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

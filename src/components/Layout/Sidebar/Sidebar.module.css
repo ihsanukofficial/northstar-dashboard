@@ -1,0 +1,161 @@
+.sidebar {
+  position: sticky;
+  z-index: 30;
+  top: 0;
+  display: flex;
+  width: var(--sidebar-width);
+  height: 100vh;
+  height: 100dvh;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-6) var(--space-4) var(--space-5);
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-2);
+}
+
+.closeButton,
+.account button {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.closeButton {
+  display: none;
+}
+
+.footer {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: auto;
+}
+
+.workspaceCard {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-subtle);
+}
+
+.workspaceIcon {
+  display: grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.workspaceCard strong,
+.workspaceCard span {
+  display: block;
+}
+
+.workspaceCard strong {
+  font-size: var(--font-size-sm);
+}
+
+.workspaceCard div span {
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+}
+
+.progress {
+  grid-column: 1 / -1;
+  height: 0.3rem;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-strong);
+}
+
+.progress span {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary);
+}
+
+.account {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.accountCopy {
+  display: grid;
+  min-width: 0;
+}
+
+.accountCopy strong,
+.accountCopy span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.accountCopy strong { font-size: var(--font-size-xs); }
+.accountCopy span { color: var(--color-text-muted); font-size: 0.66rem; }
+
+.account button:hover,
+.closeButton:hover {
+  background: var(--color-surface-strong);
+  color: var(--color-text);
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 25;
+  inset: 0;
+  display: none;
+  border: 0;
+  background: var(--color-overlay);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    width: min(84vw, 17.5rem);
+    box-shadow: var(--shadow-md);
+    transform: translateX(-105%);
+    transition: transform var(--transition-normal);
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+
+  .closeButton {
+    display: grid;
+  }
+
+  .backdrop {
+    display: block;
+  }
+
+  .visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

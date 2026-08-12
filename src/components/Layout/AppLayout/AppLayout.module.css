@@ -1,0 +1,109 @@
+.layout {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+}
+
+.contentColumn {
+  min-width: 0;
+}
+
+.contentFrame {
+  width: min(100%, var(--content-max-width));
+  margin: 0 auto;
+  padding: 0 clamp(var(--space-4), 3vw, var(--space-10)) var(--space-10);
+}
+
+.main {
+  min-width: 0;
+}
+
+.routeLoader {
+  min-height: 24rem;
+}
+
+@media (min-width: 761px) {
+  .messagesWorkspace {
+    display: grid;
+    height: 100vh;
+    height: 100dvh;
+    grid-template-rows: auto minmax(0, 1fr);
+    overflow: hidden;
+    padding-bottom: var(--space-6);
+  }
+
+  .messagesWorkspace .main {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
+
+.skipLink {
+  position: fixed;
+  z-index: 100;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-text);
+  color: var(--color-surface);
+  transform: translateY(-180%);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+.toast {
+  position: fixed;
+  z-index: 60;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  display: grid;
+  width: min(calc(100% - 2rem), 28rem);
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.toast > i { color: var(--color-info); font-size: 1.2rem; }
+
+.toast button {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.toast button:hover { background: var(--color-surface-strong); }
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .contentFrame {
+    padding-right: var(--space-4);
+    padding-left: var(--space-4);
+  }
+
+  .toast {
+    right: var(--space-4);
+    bottom: var(--space-4);
+  }
+}

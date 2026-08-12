@@ -1,0 +1,61 @@
+.card {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) 5rem;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.content {
+  display: grid;
+  min-width: 0;
+}
+
+.icon {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  margin-bottom: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.content p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 650;
+}
+
+.content strong {
+  margin: 0.15rem 0;
+  overflow: hidden;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  letter-spacing: -0.035em;
+  text-overflow: ellipsis;
+}
+
+.content > span:last-child {
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+}
+
+.chartWrap {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+
+.chartWrap > strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: var(--font-size-xs);
+  transform: translate(-50%, -50%);
+}

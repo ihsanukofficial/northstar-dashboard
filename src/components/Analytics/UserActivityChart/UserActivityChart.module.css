@@ -1,0 +1,65 @@
+.card,
+.card header {
+  display: flex;
+}
+
+.card {
+  min-width: 0;
+  flex-direction: column;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.card header {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.card header p { color: var(--color-text-muted); font-size: var(--font-size-xs); }
+.card h2 { margin-top: 0.15rem; font-size: var(--font-size-lg); }
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.trend {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.trend[data-direction='down'] {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.trend[data-direction='flat'] {
+  background: var(--color-surface-strong);
+  color: var(--color-text-muted);
+}
+
+.legend span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--chart-teal);
+}
+
+.chart {
+  min-height: clamp(15rem, 26vw, 20rem);
+  margin-top: var(--space-5);
+}
